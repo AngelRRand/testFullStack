@@ -7,7 +7,6 @@ const server = express()
 
 server.use(morgan('dev'));
 server.use('/', routes);
-
-
+server.set('Authorization', `Bearer aSuperSecretKey`)
 
 module.exports = server;
