@@ -54,12 +54,11 @@ describe('Files', () => {
                     done();
                 });
         });
-        it("it should get a fileeeee", (done) => {
+        it("it should get a file", (done) => {
             chai.request(server)
                 .get('/test9.csv')
                 .end((err, response) => {
                     response.should.have.status(200);
-                    response.body.should.be.a('object');
                     response.body.should.have.eql({
                         "file": "test9.csv",
                         "lines": [
