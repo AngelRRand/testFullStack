@@ -12,9 +12,9 @@ const getApiFiles = async () => {
 
 }
 
-const getFiles = async () => {
+const getFiles = async (test) => {
     try {
-        let getInfo = await axios.get(`https://echo-serv.tbxnet.com/v1/secret/file/test6.csv`, { headers: { "Authorization": "Bearer aSuperSecretKey" } });
+        let getInfo = await axios.get(`https://echo-serv.tbxnet.com/v1/secret/file/${test}`, { headers: { "Authorization": "Bearer aSuperSecretKey" } });
         let remplace = getInfo.data.split(',')
         let edit = remplace.map(a => a.replace("\n", "-"))
         let horror = edit.map(a => a.split('-'))
@@ -25,11 +25,14 @@ const getFiles = async () => {
             return a
         })
         resultFlat = stopPliz.flat()
+        if(resultFlat[5] === undefined){
+            throw new Error('GAS')
+        }
         let finalresult = {
-            file: resultFlat[6],
+            file: test,
             lines: [
                 {
-                    text: resultFlat.find((f, i) => i>6 && f.match(/[a-zÀ-Ü]/i)),
+                    text: resultFlat.find((f, i) => i>6 && f.match(/[a-zÀ-Ü]/i) && f != test),
                     number: resultFlat.find((f, i)=> f.match('[0-9-]+$')),
                     hex: resultFlat.find((f, i) => f.match(/^[a-zA-Z0-9]{32}$/g) )
                 }
