@@ -15,6 +15,7 @@ const getApiFiles = async () => {
 const getFiles = async (test) => {
     try {
         let getInfo = await axios.get(`https://echo-serv.tbxnet.com/v1/secret/file/${test}`, { headers: { "Authorization": "Bearer aSuperSecretKey" } });
+        console.log(getInfo.data, 'WEEEEEEEEEEEEEEEEEEEEEEEEE')
         let remplace = getInfo.data.split(',')
         let edit = remplace.map(a => a.replace("\n", "-"))
         let horror = edit.map(a => a.split('-'))
@@ -40,7 +41,7 @@ const getFiles = async (test) => {
         }
         return finalresult
     } catch (error) {
-        console.log(error)
+        console.log('HOT')
     }
 }
 
