@@ -26,7 +26,7 @@ const getFiles = async (test) => {
         })
         resultFlat = stopPliz.flat()
         if(resultFlat[5] === undefined){
-            throw new Error('GAS')
+            throw new Error
         }
         let finalresult = {
             file: test,
@@ -38,8 +38,7 @@ const getFiles = async (test) => {
                 }
             ] 
         }
-        console.log(finalresult, 'AAAAAAAAAAAAAAAAAAAAA')
-        return getInfo.data
+        return finalresult
     } catch (error) {
         console.log(error)
     }
