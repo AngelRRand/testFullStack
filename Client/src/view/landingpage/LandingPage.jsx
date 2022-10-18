@@ -1,8 +1,15 @@
 import React from 'react'
-
+import Container from '../../component/Container.jsx'
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <Container>
+      <button>
+        <Link to='home'>
+          <span>asd</span>
+        </Link>
+      </button>
+    </Container>
   )
 }
 
