@@ -33,14 +33,14 @@ const getFiles = async (test) => {
             lines: [
                 {
                     text: resultFlat.find((f, i) => i>6 && f.match(/[a-zÀ-Ü]/i) && f != test),
-                    number: resultFlat.find((f, i)=> f.match('[0-9-]+$')),
+                    number: parseInt(resultFlat.find((f, i)=> f.match('[0-9-]+$'))),
                     hex: resultFlat.find((f, i) => f.match(/^[a-zA-Z0-9]{32}$/g) )
                 }
             ] 
         };
         return finalresult
     } catch (error) {
-        console.log(error)
+        console.log('Error')
     }
 }
 

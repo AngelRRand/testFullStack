@@ -25,6 +25,7 @@ router.get('/:test', async (req, res) => {
         if(!apiInfo){
             return res.status(404).send('Error 404')
         }
+        console.log(typeof apiInfo)
         return res.status(200).json(apiInfo)
     } catch (error) {
         console.log(error)
