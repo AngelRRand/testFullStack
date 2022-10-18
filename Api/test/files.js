@@ -12,14 +12,14 @@ describe('Files', () => {
     Test GET route
     */
     describe('GET /', () => {
-        it("it should get all files", (done) =>{
+        it("it should get all files", (done) => {
             chai.request(server)
                 .get('/')
-                .end((err, response) =>{
+                .end((err, response) => {
                     response.should.have.status(200);
                     response.body.should.be.a('array');
                     response.body.length.should.be.eq(7);
-                done();
+                    done();
                 });
         });
     });
@@ -27,42 +27,50 @@ describe('Files', () => {
 
 
     describe('GET /:test', () => {
-        it("should reply status 404", (done) =>{
+        it("should reply status 404", (done) => {
             chai.request(server)
                 .get('/test1.csv')
-                .end((err, response) =>{
+                .end((err, response) => {
                     response.should.have.status(404);
-                done();
+                    done();
                 });
         });
-        it("should reply status 404", (done) =>{
+        it("should reply status 404", (done) => {
             chai.request(server)
                 .get('/test5.csv')
-                .end((err, response) =>{
+                .end((err, response) => {
                     response.should.have.status(404);
-                done();
+                    done();
                 });
         });
-        it("it should get a file", (done) =>{
+        it("it should get a file", (done) => {
             chai.request(server)
                 .get('/test3.csv')
-                .end((err, response) =>{
+                .end((err, response) => {
                     response.should.have.status(200);
                     response.body.should.be.a('object');
                     response.body.should.have.property('file');
                     response.body.should.have.property('lines');
-                done();
+                    done();
                 });
         });
-        it("it should get a file", (done) =>{
+        it("it should get a fileeeee", (done) => {
             chai.request(server)
                 .get('/test9.csv')
-                .end((err, response) =>{
+                .end((err, response) => {
                     response.should.have.status(200);
                     response.body.should.be.a('object');
-                    response.body.should.have.property('file');
-                    response.body.should.have.property('lines');
-                done();
+                    response.body.should.have.eql({
+                        "file": "test9.csv",
+                        "lines": [
+                            {
+                                "text": "OfOzPGapasejtfbiNWPUSLpQrbofi",
+                                "number": 2,
+                                "hex": "f7f00a66ff9320d1fd168d523dca16e4"
+                            }
+                        ]
+                    });
+                    done();
                 });
         });
     });
