@@ -3,7 +3,7 @@ const { Router } = require('express');
 const router = Router();
 const { getApiFiles, getFiles } = require('../controllers');
 
-router.use(express.json())
+//router.use(express.json())
 
 
 router.get('/', async (req, res) => {
@@ -25,7 +25,6 @@ router.get('/:test', async (req, res) => {
         if(!apiInfo){
             return res.status(404).send('Error 404')
         }
-        
         return res.status(200).json(apiInfo)
     } catch (error) {
         console.log(error)
