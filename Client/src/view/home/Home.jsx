@@ -9,7 +9,7 @@ const Home = () => {
   const [count, setCount] = useState(0)
   const dispatch = useDispatch();
 
-  
+
   useEffect(() => {
       if (count < 7) {
         dispatch(infoTest(Tests[count]))
@@ -19,10 +19,6 @@ const Home = () => {
       }
   }, [dispatch, count])
 
-
-
-  console.log(InfoTests, 'INFOOOOO TEST')
-  console.log(Tests)
   return (
     <div>Home</div>
   )
