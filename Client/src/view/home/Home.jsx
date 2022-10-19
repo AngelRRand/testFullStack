@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { getAllTest, infoTest } from '../../redux/actions';
+import { infoTest } from '../../redux/actions';
+import Container from '../../component/Container.jsx'
 
 const Home = () => {
   const Tests = useSelector((state) => state.Tests);
@@ -11,16 +12,20 @@ const Home = () => {
 
 
   useEffect(() => {
-      if (count < 7) {
-        dispatch(infoTest(Tests[count]))
-        setCount(count + 1)
-      } else {
-        return
-      }
+    if (count < 7) {
+      dispatch(infoTest(Tests[count]))
+      setCount(count + 1)
+    } else {
+      return
+    }
   }, [dispatch, count])
 
   return (
-    <div>Home</div>
+    <Container>
+      <main>
+        <h2>sada</h2>
+      </main>
+    </Container>
   )
 }
 
