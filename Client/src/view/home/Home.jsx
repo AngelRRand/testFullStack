@@ -8,17 +8,21 @@ const Home = () => {
   const InfoTests = useSelector((state) => state.InfoTests);
   const [count, setCount] = useState(0)
   const dispatch = useDispatch();
+
   
   useEffect(() => {
-    if(count < 7){
-      dispatch(infoTest(Tests[count]))
-      setCount(count + 1)
-    }else{
-      return
-    }
+      if (count < 7) {
+        dispatch(infoTest(Tests[count]))
+        setCount(count + 1)
+      } else {
+        return
+      }
   }, [dispatch, count])
-  console.log(Tests[0], 'HOME')
+
+
+
   console.log(InfoTests, 'INFOOOOO TEST')
+  console.log(Tests)
   return (
     <div>Home</div>
   )

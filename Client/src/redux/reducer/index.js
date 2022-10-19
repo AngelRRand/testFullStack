@@ -13,7 +13,7 @@ function rootReducer(state = inicialState, action) {
         case 'GET_TEST':
             return {
                 ...state,
-                InfoTests: action.payload,
+                InfoTests: [...state.InfoTests, action.payload]
             }
         default:
             return state
