@@ -1,7 +1,8 @@
 import React from 'react'
 import Container from '../../component/Container.jsx'
-import Button from '../../component/Button.jsx';
 import Transition from '../../component/Transition.jsx';
+import Welcome from '../../component/Welcome.jsx';
+
 
 const LandingPage = () => {
 
@@ -10,7 +11,7 @@ const LandingPage = () => {
       WH={'WH_landingPage'}
       >
       <Transition></Transition>
-        <h1>HOLA</h1>
+        <Welcome/>
     </Container>
   )
 }
