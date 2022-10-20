@@ -17,8 +17,14 @@ const Welcome = () => {
         >
             <div className="skewed">
                 <div className='presentation'>
-                    <h1>HORACIO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse rem sunt quis nostrum aspernatur aliquid itaque. Iste expedita dolor accusantium quae reprehenderit, perspiciatis, quia, distinctio praesentium numquam mollitia recusandae ad?</p>
+                    <h1>Hola soy Horacio!</h1>
+                    <p>Esta es una prueba full stack para <span>Toolbox</span></p>
+                    <p>Aprovecho esta oportunidad para presentarme:</p>
+                    <ul>
+                        <li className='lista'>· Soy capas de hacer me especializo en el <b>front</b></li>
+                        <li className='lista'>· Soy de Cordoba <i>Argentina</i></li>
+                        <li className='lista'>· Me gustan los <span>perros</span></li>
+                    </ul>
                 </div>
             </div>
         </motion.div>

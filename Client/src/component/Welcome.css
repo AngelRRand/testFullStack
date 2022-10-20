@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     background: var(--white);
-    transform: skewY(18deg);
+    transform: skewY(25deg);
     transform-origin: top left;
 }
 .info{
@@ -18,5 +18,26 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    bottom: 30vh;
     padding: 20px;
+    transform: skewY(-25deg);
+}
+.presentation h1{
+    margin-bottom: 10px;
+}
+.presentation ul {
+    margin-top: 20px;
+}
+.presentation p span{
+    color: crimson;
+}
+.lista i{
+    color: aqua;
+}
+.lista span{
+    color: rgb(52, 252, 52);
+}
+.lista b{
+    color: rgb(250, 67, 250);
 }
