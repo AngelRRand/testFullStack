@@ -9,7 +9,7 @@
 
 .list_titles {
     grid-template-rows: 1fr;
-    border-bottom: 2px solid rgb(39, 39, 39);
+    border-bottom: 3px solid var(--red);
     height: 5vh;
 }
 
