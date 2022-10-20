@@ -27,21 +27,9 @@ const Home = () => {
   console.log(InfoTests)
   return (
     <Container>
-      <motion.div
-        initial={{ opacity: 0, }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 1.5, type: "spring" },
-        }}
-        exit={{
-          opacity: 0,
-          transition: { duration: 1.5, ease: 'easeInOut' },
-        }}
-      >
         <main>
-          <h2>sada</h2>
+          <h1>HOME</h1>
         </main>
-      </motion.div>
     </Container>
   )
 }

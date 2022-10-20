@@ -8,21 +8,9 @@ const LandingPage = () => {
 
   return (
     <Container WH={'WH_landingPage'}>
-      <motion.div
-        initial={{ opacity: 0, }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 1.5, type: "spring" },
-        }}
-        exit={{
-          opacity: 0,
-          transition: { duration: 1.5, ease: 'easeInOut' },
-        }}
-      >
         <Button>
           <Link to='home'>Home</Link>
         </Button>
-      </motion.div>
     </Container>
   )
 }
