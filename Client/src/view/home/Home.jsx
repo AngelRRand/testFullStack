@@ -25,9 +25,15 @@ const Home = () => {
   }, [dispatch, count])
   console.log(InfoTests)
   return (
-    <Container>
+    <Container
+      WH={'WH_home'}
+    >
         <main>
-          <h1>HOME</h1>
+          {InfoTests?.map(f => {
+            return(
+              <h2>{f.file}</h2>
+            )
+          })}
         </main>
     </Container>
   )

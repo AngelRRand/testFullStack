@@ -1,10 +1,12 @@
 .nav{
     background-color: var(--red);
     width: 100vw;
-    height: 8vh;
+    height: 10vh;
     display: flex;
+    align-items: center;
 }
 .nav h2{
     text-align: center;
     color: var(--white);
+    padding: 30px;
 }
