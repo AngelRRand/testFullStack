@@ -3,3 +3,11 @@
     align-items: center;
     justify-content: center;
 }
+.WH_landingPage{
+    height: 100vh;
+    background-color: var(--white);
+}
+.WH_home{
+    height: 90vh;
+    background-color: var(--white);
+}

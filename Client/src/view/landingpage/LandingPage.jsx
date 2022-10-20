@@ -6,10 +6,10 @@ import Button from '../../component/Button.jsx';
 const LandingPage = () => {
   
   return (
-    <Container>
+    <Container WH={'WH_landingPage'}>
       <Button>
         <Link to='home'>
-          asd
+          Home
         </Link>
       </Button>
     </Container>

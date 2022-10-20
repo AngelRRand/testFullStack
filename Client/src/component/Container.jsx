@@ -1,9 +1,9 @@
 import React from 'react'
 import './Container.css'
-const Container = (props) => {
+const Container = ({ children, WH }) => {
   return (
-    <section className='container'>
-        {props.children}
+    <section className={`container ${WH}`}>
+        {children}
     </section>
   )
 }

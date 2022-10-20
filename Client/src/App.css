@@ -1,3 +1,8 @@
+:root{
+  --black: rgba(15, 15, 15, 0.911);
+  --white: rgb(255, 255, 255);
+  --red: rgb(255, 53, 94);
+}
 *{
   margin: 0px;
   padding: 0px;
