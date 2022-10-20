@@ -5,21 +5,25 @@ import { infoTest } from '../../redux/actions';
 import Container from '../../component/Container.jsx'
 
 const Home = () => {
-  const Tests = useSelector((state) => state.Tests);
   const InfoTests = useSelector((state) => state.InfoTests);
   const [count, setCount] = useState(0)
+  const [localTest, setLocalTest] = useState([])
   const dispatch = useDispatch();
 
-
+  const getData = () => {
+    let data = localStorage.getItem('tests')
+    setLocalTest(data.split(','))
+  }
   useEffect(() => {
+     getData()
     if (count < 7) {
-      dispatch(infoTest(Tests[count]))
+      dispatch(infoTest(localTest[count]))
       setCount(count + 1)
     } else {
       return
     }
   }, [dispatch, count])
-
+ console.log(InfoTests)
   return (
     <Container>
       <main>
