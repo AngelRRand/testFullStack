@@ -1,27 +1,28 @@
 import React from 'react'
-import { motion } from "framer-motion";
+import Button from '../../component/Button'
+import { useLocation } from "react-router-dom";
 import './Nav.css'
 
 
 const Nav = () => {
-
+  const sampleLocation = useLocation();
   return (
-    <motion.div
-      initial={{ x: 3500, }}
-      animate={{
-        x: 0,
-        transition: { duration: 1.5, ease: 'easeInOut' },
-      }}
-      exit={{
-        x: -3500,
-        transition: { duration: 1.5, ease: 'easeInOut' },
-      }}
-    >
+    
       <nav className='nav'>
         <h2>Test Full Stack </h2>
+        {
+          
+          sampleLocation.pathname.toString() === '/' ?  (
+            <Button to={'/home'} text={'Home'}>
+            </Button>
+          ) : (
+            <Button to={'/'} text={'Landing'}>
+            </Button>
+          )
+          
+        }
       </nav>
 
-    </motion.div>
   )
 }
 
