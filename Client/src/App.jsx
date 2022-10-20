@@ -9,6 +9,7 @@ import Nav from './view/nav/Nav.jsx';
 
 function App() {
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(getAllTest())
     

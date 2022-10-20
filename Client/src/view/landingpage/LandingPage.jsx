@@ -8,9 +8,7 @@ const LandingPage = () => {
   return (
     <Container WH={'WH_landingPage'}>
       <Button>
-        <Link to='home'>
-          Home
-        </Link>
+        <Link to='home'>Home</Link>
       </Button>
     </Container>
   )
