@@ -1,7 +1,7 @@
 :root{
-  --black: rgba(15, 15, 15, 0.911);
+  --black: rgba(0, 0, 0, 0.959);
   --white: rgb(255, 255, 255);
-  --red: rgb(255, 53, 94);
+  --red: rgb(36, 36, 36);
 }
 *{
   margin: 0px;

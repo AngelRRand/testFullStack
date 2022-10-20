@@ -6,9 +6,11 @@ import Transition from '../../component/Transition.jsx';
 const LandingPage = () => {
 
   return (
-    <Container WH={'WH_landingPage'}>
+    <Container 
+      WH={'WH_landingPage'}
+      >
       <Transition></Transition>
-        
+        <h1>HOLA</h1>
     </Container>
   )
 }

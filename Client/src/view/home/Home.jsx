@@ -11,6 +11,9 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const getData = () => {
+    if(InfoTests.length > 0){
+      return
+    }
     let data = localStorage.getItem('tests')
     setLocalTest(data.split(','))
   }
