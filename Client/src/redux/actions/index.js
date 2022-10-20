@@ -20,7 +20,6 @@ export function getAllTest() {
 export function infoTest(test) {
     return async function (dispatch) {
         let response = await axios.get(`http://localhost:3001/${test}`)
-        //console.log(response)
         return dispatch({
             type: 'GET_TEST',
             payload: response.data

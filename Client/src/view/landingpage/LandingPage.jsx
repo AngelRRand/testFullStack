@@ -7,11 +7,11 @@ import Welcome from '../../component/Welcome.jsx';
 const LandingPage = () => {
 
   return (
-    <Container 
+    <Container
       WH={'WH_landingPage'}
-      >
+    >
       <Transition></Transition>
-        <Welcome/>
+      <Welcome />
     </Container>
   )
 }

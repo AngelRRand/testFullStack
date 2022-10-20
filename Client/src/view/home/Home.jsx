@@ -27,7 +27,6 @@ const Home = () => {
       return
     }
   }, [dispatch, count])
-  console.log(InfoTests)
   return (
     <Container
       WH={'WH_home'}
@@ -35,7 +34,6 @@ const Home = () => {
     >
         <main>
           <ListFiles InfoTests={InfoTests}></ListFiles>
-          
         </main>
     </Container>
   )
