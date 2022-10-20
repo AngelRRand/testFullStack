@@ -2,12 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--white);
 }
 .WH_landingPage{
     height: 100vh;
-    background-color: var(--white);
 }
 .WH_home{
     height: 90vh;
-    background-color: var(--white);
 }

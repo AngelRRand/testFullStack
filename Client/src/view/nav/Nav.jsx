@@ -6,8 +6,6 @@ import './Nav.css'
 const Nav = () => {
 
   const sampleLocation = useLocation();
-  
-
   if (sampleLocation.pathname.toString() === '/') {
     return <></>
   } else {
