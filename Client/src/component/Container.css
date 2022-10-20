@@ -9,3 +9,7 @@
 .WH_home{
     height: 90vh;
 }
+.container_center{
+    align-items: center;
+    justify-content: center;
+}

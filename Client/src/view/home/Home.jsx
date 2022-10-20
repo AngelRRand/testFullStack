@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { infoTest } from '../../redux/actions';
 import Container from '../../component/Container.jsx'
+import ListFiles from '../../component/ListFiles';
 
 const Home = () => {
   const InfoTests = useSelector((state) => state.InfoTests);
@@ -30,13 +31,11 @@ const Home = () => {
   return (
     <Container
       WH={'WH_home'}
+      center={'container_center'}
     >
         <main>
-          {InfoTests?.map(f => {
-            return(
-              <h2>{f.file}</h2>
-            )
-          })}
+          <ListFiles InfoTests={InfoTests}></ListFiles>
+          
         </main>
     </Container>
   )

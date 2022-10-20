@@ -1,9 +1,8 @@
 import React from 'react'
-import { motion } from "framer-motion";
 import './Container.css'
-const Container = ({ children, WH }) => {
+const Container = ({ children, WH, center }) => {
   return (
-    <section className={`container ${WH}`}>
+    <section className={`container ${WH} ${center}`}>
         {children}
     </section>
   )
