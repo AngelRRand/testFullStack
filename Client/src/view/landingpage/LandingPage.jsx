@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Container from '../../component/Container.jsx'
 import Button from '../../component/Button.jsx';
-import { motion } from "framer-motion";
 
 const LandingPage = () => {
 
