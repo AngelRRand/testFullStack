@@ -1,0 +1,33 @@
+.red{
+    position: absolute;
+    background-color: var(--red);
+    height: 10vh;
+    width: 100vw;
+}
+.red_1{
+    bottom: 80vh;
+}
+.red_2{
+    bottom: 70vh;
+}
+.red_3{
+    bottom: 60vh;
+}
+.red_4{
+    bottom: 50vh;
+}
+.red_5{
+    bottom: 40vh;
+}
+.red_6{
+    bottom: 30vh;
+}
+.red_7{
+    bottom: 20vh;
+}
+.red_8{
+    bottom: 10vh;
+}
+.red_9{
+    bottom: 0vh;
+}
